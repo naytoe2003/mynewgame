@@ -1,0 +1,86 @@
+/* Memories APK - Mobile Game UI */
+
+body {
+    margin: 0;
+    background: #12121c;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#memories-app {
+    width: 95vw;
+    max-width: 480px;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.memories-title {
+    font-size: 2.5rem;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+/* TIMER */
+#memories-timer {
+    color: #ffffff;
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+}
+
+/* GRID */
+#memories-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+/* CARD STYLE */
+.memories-card {
+    width: 100%;
+    padding-top: 100%; /* makes square */
+    background: #2b2b40;
+    border-radius: 12px;
+    position: relative;
+    cursor: pointer;
+}
+
+.memories-card.revealed {
+    background: #ffffff;
+}
+
+.memories-card.matched {
+    background: #48e68c;
+}
+
+.memories-card span {
+    font-size: 2rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+
+.memories-card.revealed span,
+.memories-card.matched span {
+    display: block;
+}
+
+/* RESTART BUTTON */
+#memories-restart {
+    margin-top: 20px;
+    padding: 12px 25px;
+    background: #ff4d4d;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+#memories-restart:active {
+    transform: scale(0.95);
+}
